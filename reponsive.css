@@ -1,0 +1,112 @@
+/* ========================================
+   RESPONSIVE.CSS - ALL RESPONSIVE STYLES
+   Mobile and tablet optimizations
+   ======================================== */
+
+/* ===== TABLET & SMALL LAPTOPS ===== */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .intro-photo-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .teddy-bear {
+        font-size: 6rem;
+    }
+
+    .btn-yes,
+    .btn-no {
+        padding: 18px 50px;
+        font-size: 1.5rem;
+    }
+
+    .buttons-wrapper {
+        gap: 30px;
+        min-height: 120px;
+    }
+
+    .success-title {
+        font-size: 3.5rem;
+    }
+
+    .big-heart-animation {
+        font-size: 7rem;
+    }
+
+    .success-text {
+        font-size: 1.4rem;
+    }
+
+    .content-wrapper {
+        padding: 40px 25px;
+    }
+    
+    /* Smaller decorations on tablet */
+    .dec1, .dec2 {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    
+    .dec3 {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
+/* ===== MOBILE PHONES ===== */
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 1.8rem;
+    }
+    
+    .intro-photo-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .teddy-bear {
+        font-size: 5rem;
+    }
+
+    .btn-yes,
+    .btn-no {
+        padding: 15px 40px;
+        font-size: 1.3rem;
+    }
+
+    .buttons-wrapper {
+        gap: 20px;
+        min-height: 100px;
+    }
+
+    .success-title {
+        font-size: 2.5rem;
+    }
+
+    .big-heart-animation {
+        font-size: 5rem;
+    }
+
+    .success-text {
+        font-size: 1.2rem;
+    }
+    
+    /* Even smaller decorations on mobile */
+    .dec1, .dec2 {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    .dec3 {
+        width: 80px !important;
+        height: 80px !important;
+    }
+}

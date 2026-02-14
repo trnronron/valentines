@@ -1,0 +1,392 @@
+/* ========================================
+   FIREWORKS.CSS - HEART-SHAPED PARTICLE EXPLOSIONS
+   Fireworks launch up, then particles explode in heart shape
+   ======================================== */
+
+/* ===== FIREWORKS CONTAINER ===== */
+.fireworks-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+    overflow: hidden;
+}
+
+/* ===== FIREWORK BASE ===== */
+.firework {
+    position: absolute;
+    bottom: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+/* Each firework launches from different positions */
+.firework:nth-child(1) {
+    left: 15%;
+    animation: firework1 4s ease-out infinite;
+}
+
+.firework:nth-child(2) {
+    left: 35%;
+    animation: firework2 4.5s ease-out infinite;
+    animation-delay: 0.8s;
+}
+
+.firework:nth-child(3) {
+    left: 55%;
+    animation: firework3 4.2s ease-out infinite;
+    animation-delay: 1.6s;
+}
+
+.firework:nth-child(4) {
+    left: 75%;
+    animation: firework4 4.8s ease-out infinite;
+    animation-delay: 2.4s;
+}
+
+.firework:nth-child(5) {
+    left: 85%;
+    animation: firework5 4.3s ease-out infinite;
+    animation-delay: 3.2s;
+}
+
+/* ===== FIREWORK ANIMATIONS ===== */
+/* Firework 1 - BRIGHT GREEN */
+@keyframes firework1 {
+    0% {
+        bottom: 0;
+        opacity: 1;
+        background: #00ff00;
+        box-shadow: 0 0 15px #00ff00;
+    }
+    40% {
+        bottom: 65%;
+        opacity: 1;
+        background: #00ff00;
+        box-shadow: 0 0 20px #00ff00;
+    }
+    41% {
+        background: transparent;
+        opacity: 0;
+    }
+    42% {
+        opacity: 1;
+        /* Heart shape particles - BRIGHT GREEN */
+        box-shadow:
+            /* Top curves of heart */
+            -25px -15px 0 3px #00ff00,
+            -20px -20px 0 3px #00ff00,
+            -15px -22px 0 3px #00ff00,
+            -10px -23px 0 3px #00ff00,
+            -5px -23px 0 3px #00ff00,
+            0px -23px 0 3px #00ff00,
+            5px -23px 0 3px #00ff00,
+            10px -23px 0 3px #00ff00,
+            15px -22px 0 3px #00ff00,
+            20px -20px 0 3px #00ff00,
+            25px -15px 0 3px #00ff00,
+            /* Sides of heart */
+            -28px -10px 0 3px #00dd00,
+            -30px -5px 0 3px #00dd00,
+            -30px 0px 0 3px #00dd00,
+            28px -10px 0 3px #00dd00,
+            30px -5px 0 3px #00dd00,
+            30px 0px 0 3px #00dd00,
+            /* Middle of heart */
+            -28px 5px 0 3px #00bb00,
+            -25px 10px 0 3px #00bb00,
+            -22px 13px 0 3px #00bb00,
+            28px 5px 0 3px #00bb00,
+            25px 10px 0 3px #00bb00,
+            22px 13px 0 3px #00bb00,
+            /* Bottom of heart - forming point */
+            -18px 16px 0 3px #009900,
+            -14px 18px 0 3px #009900,
+            -10px 20px 0 3px #009900,
+            -6px 22px 0 3px #009900,
+            18px 16px 0 3px #009900,
+            14px 18px 0 3px #009900,
+            10px 20px 0 3px #009900,
+            6px 22px 0 3px #009900,
+            /* Heart point */
+            -2px 24px 0 3px #007700,
+            2px 24px 0 3px #007700,
+            0px 26px 0 3px #fff;
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 65%;
+        opacity: 0;
+        box-shadow: none;
+    }
+}
+
+/* Firework 2 - BRIGHT GOLD/YELLOW */
+@keyframes firework2 {
+    0% {
+        bottom: 0;
+        opacity: 1;
+        background: #ffd700;
+        box-shadow: 0 0 15px #ffd700;
+    }
+    40% {
+        bottom: 70%;
+        opacity: 1;
+        background: #ffd700;
+        box-shadow: 0 0 20px #ffd700;
+    }
+    41% {
+        background: transparent;
+        opacity: 0;
+    }
+    42% {
+        opacity: 1;
+        box-shadow:
+            -25px -15px 0 3px #ffd700,
+            -20px -20px 0 3px #ffd700,
+            -15px -22px 0 3px #ffd700,
+            -10px -23px 0 3px #ffd700,
+            -5px -23px 0 3px #ffd700,
+            0px -23px 0 3px #ffd700,
+            5px -23px 0 3px #ffd700,
+            10px -23px 0 3px #ffd700,
+            15px -22px 0 3px #ffd700,
+            20px -20px 0 3px #ffd700,
+            25px -15px 0 3px #ffd700,
+            -28px -10px 0 3px #ffcc00,
+            -30px -5px 0 3px #ffcc00,
+            -30px 0px 0 3px #ffcc00,
+            28px -10px 0 3px #ffcc00,
+            30px -5px 0 3px #ffcc00,
+            30px 0px 0 3px #ffcc00,
+            -28px 5px 0 3px #ffbb00,
+            -25px 10px 0 3px #ffbb00,
+            -22px 13px 0 3px #ffbb00,
+            28px 5px 0 3px #ffbb00,
+            25px 10px 0 3px #ffbb00,
+            22px 13px 0 3px #ffbb00,
+            -18px 16px 0 3px #ffaa00,
+            -14px 18px 0 3px #ffaa00,
+            -10px 20px 0 3px #ffaa00,
+            -6px 22px 0 3px #ffaa00,
+            18px 16px 0 3px #ffaa00,
+            14px 18px 0 3px #ffaa00,
+            10px 20px 0 3px #ffaa00,
+            6px 22px 0 3px #ffaa00,
+            -2px 24px 0 3px #ff9900,
+            2px 24px 0 3px #ff9900,
+            0px 26px 0 3px #fff;
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 70%;
+        opacity: 0;
+        box-shadow: none;
+    }
+}
+
+/* Firework 3 - BRIGHT WHITE */
+@keyframes firework3 {
+    0% {
+        bottom: 0;
+        opacity: 1;
+        background: #fff;
+        box-shadow: 0 0 15px #fff;
+    }
+    40% {
+        bottom: 60%;
+        opacity: 1;
+        background: #fff;
+        box-shadow: 0 0 20px #fff;
+    }
+    41% {
+        background: transparent;
+        opacity: 0;
+    }
+    42% {
+        opacity: 1;
+        box-shadow:
+            -25px -15px 0 3px #fff,
+            -20px -20px 0 3px #fff,
+            -15px -22px 0 3px #fff,
+            -10px -23px 0 3px #fff,
+            -5px -23px 0 3px #fff,
+            0px -23px 0 3px #fff,
+            5px -23px 0 3px #fff,
+            10px -23px 0 3px #fff,
+            15px -22px 0 3px #fff,
+            20px -20px 0 3px #fff,
+            25px -15px 0 3px #fff,
+            -28px -10px 0 3px #f0f0f0,
+            -30px -5px 0 3px #f0f0f0,
+            -30px 0px 0 3px #f0f0f0,
+            28px -10px 0 3px #f0f0f0,
+            30px -5px 0 3px #f0f0f0,
+            30px 0px 0 3px #f0f0f0,
+            -28px 5px 0 3px #e0e0e0,
+            -25px 10px 0 3px #e0e0e0,
+            -22px 13px 0 3px #e0e0e0,
+            28px 5px 0 3px #e0e0e0,
+            25px 10px 0 3px #e0e0e0,
+            22px 13px 0 3px #e0e0e0,
+            -18px 16px 0 3px #d0d0d0,
+            -14px 18px 0 3px #d0d0d0,
+            -10px 20px 0 3px #d0d0d0,
+            -6px 22px 0 3px #d0d0d0,
+            18px 16px 0 3px #d0d0d0,
+            14px 18px 0 3px #d0d0d0,
+            10px 20px 0 3px #d0d0d0,
+            6px 22px 0 3px #d0d0d0,
+            -2px 24px 0 3px #c0c0c0,
+            2px 24px 0 3px #c0c0c0,
+            0px 26px 0 3px #ffd700;
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 60%;
+        opacity: 0;
+        box-shadow: none;
+    }
+}
+
+/* Firework 4 - BRIGHT CYAN/BLUE */
+@keyframes firework4 {
+    0% {
+        bottom: 0;
+        opacity: 1;
+        background: #00ffff;
+        box-shadow: 0 0 15px #00ffff;
+    }
+    40% {
+        bottom: 68%;
+        opacity: 1;
+        background: #00ffff;
+        box-shadow: 0 0 20px #00ffff;
+    }
+    41% {
+        background: transparent;
+        opacity: 0;
+    }
+    42% {
+        opacity: 1;
+        box-shadow:
+            -25px -15px 0 3px #00ffff,
+            -20px -20px 0 3px #00ffff,
+            -15px -22px 0 3px #00ffff,
+            -10px -23px 0 3px #00ffff,
+            -5px -23px 0 3px #00ffff,
+            0px -23px 0 3px #00ffff,
+            5px -23px 0 3px #00ffff,
+            10px -23px 0 3px #00ffff,
+            15px -22px 0 3px #00ffff,
+            20px -20px 0 3px #00ffff,
+            25px -15px 0 3px #00ffff,
+            -28px -10px 0 3px #00dddd,
+            -30px -5px 0 3px #00dddd,
+            -30px 0px 0 3px #00dddd,
+            28px -10px 0 3px #00dddd,
+            30px -5px 0 3px #00dddd,
+            30px 0px 0 3px #00dddd,
+            -28px 5px 0 3px #00bbbb,
+            -25px 10px 0 3px #00bbbb,
+            -22px 13px 0 3px #00bbbb,
+            28px 5px 0 3px #00bbbb,
+            25px 10px 0 3px #00bbbb,
+            22px 13px 0 3px #00bbbb,
+            -18px 16px 0 3px #009999,
+            -14px 18px 0 3px #009999,
+            -10px 20px 0 3px #009999,
+            -6px 22px 0 3px #009999,
+            18px 16px 0 3px #009999,
+            14px 18px 0 3px #009999,
+            10px 20px 0 3px #009999,
+            6px 22px 0 3px #009999,
+            -2px 24px 0 3px #007777,
+            2px 24px 0 3px #007777,
+            0px 26px 0 3px #fff;
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 68%;
+        opacity: 0;
+        box-shadow: none;
+    }
+}
+
+/* Firework 5 - BRIGHT ORANGE */
+@keyframes firework5 {
+    0% {
+        bottom: 0;
+        opacity: 1;
+        background: #ff8800;
+        box-shadow: 0 0 15px #ff8800;
+    }
+    40% {
+        bottom: 63%;
+        opacity: 1;
+        background: #ff8800;
+        box-shadow: 0 0 20px #ff8800;
+    }
+    41% {
+        background: transparent;
+        opacity: 0;
+    }
+    42% {
+        opacity: 1;
+        box-shadow:
+            -25px -15px 0 3px #ff8800,
+            -20px -20px 0 3px #ff8800,
+            -15px -22px 0 3px #ff8800,
+            -10px -23px 0 3px #ff8800,
+            -5px -23px 0 3px #ff8800,
+            0px -23px 0 3px #ff8800,
+            5px -23px 0 3px #ff8800,
+            10px -23px 0 3px #ff8800,
+            15px -22px 0 3px #ff8800,
+            20px -20px 0 3px #ff8800,
+            25px -15px 0 3px #ff8800,
+            -28px -10px 0 3px #ff7700,
+            -30px -5px 0 3px #ff7700,
+            -30px 0px 0 3px #ff7700,
+            28px -10px 0 3px #ff7700,
+            30px -5px 0 3px #ff7700,
+            30px 0px 0 3px #ff7700,
+            -28px 5px 0 3px #ff6600,
+            -25px 10px 0 3px #ff6600,
+            -22px 13px 0 3px #ff6600,
+            28px 5px 0 3px #ff6600,
+            25px 10px 0 3px #ff6600,
+            22px 13px 0 3px #ff6600,
+            -18px 16px 0 3px #ff5500,
+            -14px 18px 0 3px #ff5500,
+            -10px 20px 0 3px #ff5500,
+            -6px 22px 0 3px #ff5500,
+            18px 16px 0 3px #ff5500,
+            14px 18px 0 3px #ff5500,
+            10px 20px 0 3px #ff5500,
+            6px 22px 0 3px #ff5500,
+            -2px 24px 0 3px #ff4400,
+            2px 24px 0 3px #ff4400,
+            0px 26px 0 3px #fff;
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 63%;
+        opacity: 0;
+        box-shadow: none;
+    }
+}
